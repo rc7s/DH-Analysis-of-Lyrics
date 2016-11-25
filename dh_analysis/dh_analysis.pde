@@ -8,7 +8,7 @@ void setup(){
   //check: print # of lines
   println("there are " + (lyrics.length - 11) + " words in the file");
   //var userWord - to query each line for a matching word
-  userWord = "love";
+  userWord = "LOVE";
   
   //GUI initialize
   size(1600,900);
@@ -26,7 +26,7 @@ void setup(){
      int posSize = int(random(-1-count,1+count));
      int posSize2 = int(random(-1-count,1+count));
      int negSize = 2;
-     if (lyrics[i].equals(userWord) == true){
+     if (lyrics[i].equals(userWord) == true || lyrics[i].equals(userWord+"S") == true){
        //ellipse(ranX,ranY,posSize,posSize);
        noFill();
        triangle(width/2,height/2,ranX+posSize,ranY+posSize,ranX+posSize2,ranY+posSize2);
@@ -45,7 +45,7 @@ void setup(){
   fill(0);
   textSize(12);
   textAlign(RIGHT);
-  text(userWord + " appears " + count + " times", width-30, height-30);
+  text(userWord + "(S) appears " + count + " times", width-30, height-30);
   
   println(count);
   
