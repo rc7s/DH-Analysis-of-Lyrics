@@ -4,11 +4,11 @@ int count = 0;
 
 void setup(){
   //load .txt file - store each line into array
-  lyrics = loadStrings("1996.txt");
+  lyrics = loadStrings("2006.txt");
   //check: print # of lines
   println("there are " + (lyrics.length - 11) + " words in the file");
   //var userWord - to query each line for a matching word
-  userWord = "LOVE";
+  userWord = "EYE";
   
   //GUI initialize
   size(1600,900);
